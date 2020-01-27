@@ -11,6 +11,7 @@ class NameContainer extends Component {
         this.setState({
             value: e.target.value, // 현재 input에 입력된 값 가져오기
         });
+        console.log(this.state.value)
     };
     handleSubmit = e => {
         e.preventDefault(); // onSubmit의 기본적인 이벤트 방지(새로고침)

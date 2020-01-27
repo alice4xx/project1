@@ -7,11 +7,11 @@ class App extends Component {
     name : null,
   }
 
-  sameName = data=>{
+  saveName = xoxo=>{
     this.setState({
-      name: data,// 데이터를 setstate해서 name으로 받고
+      name: xoxo,// xoxo인자로 밥을줘서 setstate해서 name으로 받고
     })
-    localStorage.setItem('MOMENTUM_NAME', data);//로컬스토리지에 데이터를 저이름으로 저장
+    localStorage.setItem('MOMENTUM_NAME', xoxo);//로컬스토리지에 데이터를 저이름으로 저장
   }
 
   getName =()=>{
@@ -26,6 +26,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.name)
     const {name}=this.state;
     return (
         <>
