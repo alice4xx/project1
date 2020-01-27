@@ -4,6 +4,8 @@ import GlobalStyle from './GlobalStyle';
 // Components
 import Name from './Name';
 import Clock from './Clock';//꼭 해당 폴더에서 해당 js파일까지 닿아야 하는 건 아님. 게다가 폴더에 있는 네임펑션을 가져옴
+import Search from './Search';
+
 
 class App extends Component {
   state ={
@@ -32,10 +34,11 @@ class App extends Component {
     console.log(this.state.name)
     const {name}=this.state;
     return (
+      //Clock Component와 마찬가지로 name 값의 유무에 따라 rendering이 되도록 
         <>
             <GlobalStyle />
             모멘텀
-            {name ===null? (<Name saveName={this.saveName}/>) :( <> <Clock name={name}/> </>) }
+            {name ===null? (<Name saveName={this.saveName}/>) :( <> <Clock name={name}/> <Search/> </>) }
         </>
     );
 }
