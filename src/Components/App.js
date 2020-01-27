@@ -5,6 +5,7 @@ import GlobalStyle from './GlobalStyle';
 import Name from './Name';
 import Clock from './Clock';//꼭 해당 폴더에서 해당 js파일까지 닿아야 하는 건 아님. 게다가 폴더에 있는 네임펑션을 가져옴
 import Search from './Search';
+import Weather from './Weather';
 
 
 class App extends Component {
@@ -38,7 +39,7 @@ class App extends Component {
         <>
             <GlobalStyle />
             모멘텀
-            {name ===null? (<Name saveName={this.saveName}/>) :( <> <Clock name={name}/> <Search/> </>) }
+            {name ===null? (<Name saveName={this.saveName}/>) :( <> <Clock name={name}/> <Search/> <Weather/> </>) }
         </>
     );
 }
