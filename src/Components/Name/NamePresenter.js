@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 //@자식 : 파일이름은 namepresenter인데 사실상 컴포넌트이름이 name이다
 
-//애니메이션 효과
+//애니메이션 효과 : 메인에 '헬로~'이부분 에니메이션
 const fadeAni = keyframes`
     from {
         opacity :0
@@ -16,7 +16,7 @@ const fadeAni = keyframes`
 
 //css적용
 const Form = styled.form `
-animation :${fadeAni} 2s linear;
+animation :${fadeAni} 1.5s linear;
 display : flex;
 flex-direction : column;
 font-size : 2rem;
@@ -28,6 +28,7 @@ margin-bottom : 0.5rem;
 `;
 
 const Input =styled.input`
+/* animation :${fadeAni} 1.5s linear; */
 all: unset;
 border-bottom : 2px solid #fff;
 text-align : center;
